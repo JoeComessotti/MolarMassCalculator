@@ -5,9 +5,12 @@ from Calculations.Mass import calculateMass
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['POST'])
 def index():
+    #did the http request contain a post method
     if request.method == 'POST':
+        #checks which button was used to submit form data, 
+        # and calculates the data accordingly
         if request.form.get('Molarmass'):
             result = request.form
             formula = result['Formula']

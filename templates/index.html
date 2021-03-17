@@ -20,6 +20,7 @@
                         <label for=""></label>
                         <input type="text" class="form-control" name="Formula" id="Formula" placeholder="Formula">
                         <div class="m-2"></div>
+                        <!--Checks if the redirect contained a molar mass variable-->
                         {% if mm %}
                             <p>{{formula}} = {{mm}}g/mol</p>
                         {% endif%}
@@ -40,6 +41,7 @@
                             <input type="text" class="form-control" name="molsmass" id="molsmass" placeholder="Mols/Mass">   
                         </div>
                         <div class="m-2"></div>
+                        <!--Checks if the redirect contained either a mols or mass variable, and displays information accodingly-->
                         {% if mols %}
                             <p>{{mols}} mols of {{formula}}</p>
                         {% endif %}

@@ -1,3 +1,5 @@
+# variable names = element symbols
+# values = that elements molar mass
 H = 1.01
 He = 4.00 
 Li = 6.94
