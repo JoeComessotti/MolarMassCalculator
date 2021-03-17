@@ -1,10 +1,10 @@
 INTRODUCTION
 ------------
 
-This project is a web app, that can be used to calculate the molar mass of a chemical formula,
+This project is a web app that can be used to calculate the molar mass of a chemical formula,
 as well as the amount of moles or grams of a chemical formula
 
-The technologies used to make this program were, Python, Flask, Boostrap (and its requirements
+The technologies used to make this program were Python, Flask, Boostrap (and its requirements
  such as jquery), javascript, html and css. 
 
 
