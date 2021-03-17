@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <div class="container row">
+        <!--Molar mass calculator card/form-->
+        <div class="card align-items-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Molar Mass Calculator</h5>
+                <div class="form-group text-center">
+                    <form action="/" method="post">
+                        <label for=""></label>
+                        <input type="text" class="form-control" name="Formula" id="Formula" placeholder="Formula">
+                        <div class="m-2"></div>
+                        {% if mm %}
+                            <p>{{formula}} = {{mm}}g/mol</p>
+                        {% endif%}
+                        <button type="submit" class="btn btn-primary" name="Molarmass" value="Molarmass">Enter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Mols/Mass Calculator-->
+        <div class="card align-items-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Mols/Mass Calculator</h5>
+                <div class="form-group text-center">
+                    <form action="/" method="post">
+                        <label for=""></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="FormulaM" id="FormulaM" placeholder="Formula">
+                            <input type="text" class="form-control" name="molsmass" id="molsmass" placeholder="Mols/Mass">   
+                        </div>
+                        <div class="m-2"></div>
+                        {% if mols %}
+                            <p>{{mols}} mols of {{formula}}</p>
+                        {% endif %}
+                        {% if mass %}
+                            <p>{{mass}} grams of {{formula}}</p>
+                        {% endif %}
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Mols/Mass
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                              <button class="dropdown-item" type="submit" name="mols" value="mols">Mols</button>
+                              <button class="dropdown-item" type="submit" name="mass" value="mass">Mass</button>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    // prevents form resubmittion upon refresh
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
+</html>
